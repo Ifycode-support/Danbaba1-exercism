@@ -1,0 +1,12 @@
+
+export function memoizeTransform(f) {
+   const cache = {};
+  return function memoize(...args){
+    if(cache[args]){
+      return cache[args]
+    } 
+    const result = f.apply(this,args);
+    cache[args] = result;
+  };
+  return result;
+}
