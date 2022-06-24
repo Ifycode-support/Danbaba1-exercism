@@ -1,0 +1,37 @@
+export function Size(width = 80,height = 60) {
+  this.width = width;
+  this.height = height;
+}
+Size.prototype.resize = function(newWidth,newHeight){
+  this.width = newWidth;
+  this.height = newHeight;
+};
+
+export function Position(x=0,y=0){
+  this.x = x;
+  this.y = y;
+}
+Position.prototype.move = function (newX,newY) {
+  this.x = newX;
+  this.y = newY;
+}
+
+export class ProgramWindow{
+  constructor(screenSize,width=800,height=600){
+    this.screenSize = [];
+    this.screenSize.width = width;
+    this.screenSize.height = height;
+    this.size = new Size();
+    this.position = new Position();
+  }
+  resize(Size){
+    return this.size = new Size();
+  }
+  move(Position){
+    
+  }
+}
+
+export function changeWindow(ProgramWindow){
+  
+}
